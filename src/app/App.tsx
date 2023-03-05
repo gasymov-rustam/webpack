@@ -1,10 +1,8 @@
 import { Decrement } from '../components';
 
-export const App = () => {
-  return (
-    <>
-      Hello
-      <Decrement />
-    </>
+export const App = () => (
+  <>
+    Hello
+    <Decrement />
+  </>
   );
-};

@@ -21,15 +21,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'prettier',
-    'react-hooks',
-    'eslint-plugin-import',
-    'path-checker-plugin',
-    'unused-imports',
-  ],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks', 'eslint-plugin-import', 'unused-imports'],
   rules: {
     'unused-imports/no-unused-imports': 'error',
     'import/no-cycle': ['error'],
@@ -68,7 +60,6 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'react/no-array-index-key': 'off',
-    'path-checker-plugin/path-checker': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,

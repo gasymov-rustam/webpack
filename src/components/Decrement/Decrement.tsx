@@ -13,7 +13,9 @@ export const Decrement = memo(() => {
 
   return (
     <div className={style.block}>
-      <button onClick={handleStateChange}>Click</button>
+      <button type="button" onClick={handleStateChange}>
+        Click
+      </button>
     </div>
   );
 });
