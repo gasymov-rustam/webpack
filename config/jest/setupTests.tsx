@@ -1,13 +1,10 @@
 import '@testing-library/jest-dom';
 import { RenderOptions, render } from '@testing-library/react';
 import React, { FC, ReactElement } from 'react';
-import { Provider } from 'react-redux';
 
-import { store } from '../../src/store';
+import { StoreProvider } from '../../src/store';
 
-const AllTheProviders: FC<{ children: React.ReactNode }> = ({ children }) => (
-  <Provider store={store}>{children}</Provider>
-);
+const AllTheProviders: FC<{ children: React.ReactNode }> = ({ children }) => <StoreProvider>{children}</StoreProvider>;
 
 const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>) =>
   render(ui, { wrapper: AllTheProviders, ...options });

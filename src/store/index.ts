@@ -1,3 +1,3 @@
-export * from './store';
-export * from './slices';
-export * from './helpers';
+export { decrementActions } from './slices';
+export { fetchStatusesMap } from './helpers';
+export { StoreProvider, useAppDispatch, useAppSelector } from './StoreProvider';
