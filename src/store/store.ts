@@ -8,6 +8,7 @@ export const store = configureStore({
   reducer: {
     [decrementMinus.name]: decrementMinus.reducer,
   },
+  devTools: __IS_DEV__,
   middleware: __IS_DEV__ ? (getDefaultMiddleware) => getDefaultMiddleware().concat(logger) : undefined,
 });
 
