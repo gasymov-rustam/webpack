@@ -65,6 +65,7 @@
     "jest-environment-jsdom": "^29.4.3",
     "jest-html-reporters": "^3.1.4",
     "json-server": "^0.17.2",
+    "lint-staged": "^13.1.2",
     "mini-css-extract-plugin": "^2.7.2",
     "react-refresh": "^0.14.0",
     "regenerator-runtime": "^0.13.11",
@@ -86,5 +87,11 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "redux-logger": "^3.0.6"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "prettier --list-different",
+      "eslint"
+    ]
   }
 }

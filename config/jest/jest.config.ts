@@ -17,17 +17,6 @@ const config: Config.InitialOptions = {
     '\\.jpg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  reporters: [
-    'default',
-    [
-      'jest-html-reporters',
-      {
-        publicPath: '<rootDir>/reports/unit',
-        filename: 'report.html',
-        inlineSource: true,
-      },
-    ],
-  ],
   globals: {
     __IS_DEV__: true,
   },
