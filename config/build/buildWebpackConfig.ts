@@ -12,6 +12,9 @@ export const buildWebpackConfig = (options: BuildOptions): Configuration => {
   return {
     mode,
     entry: paths.entry,
+    performance: {
+      hints: false,
+    },
     output: {
       filename: '[name].[contenthash].js',
       path: paths.build,
