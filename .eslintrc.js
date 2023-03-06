@@ -23,6 +23,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'prettier', 'react-hooks', 'eslint-plugin-import', 'unused-imports'],
   rules: {
+    'consistent-return': 'off',
     'unused-imports/no-unused-imports': 'error',
     'import/no-cycle': ['error'],
     indent: 'off',

@@ -1,5 +1,6 @@
 import { Configuration } from 'webpack';
 
+import { buildCache } from './buildCache';
 import { buildDevServer } from './buildDevServer';
 import { moduleBuildLoaders } from './buildLoaders';
 import { buildPlugins } from './buildPlugins';
@@ -21,6 +22,7 @@ export const buildWebpackConfig = (options: BuildOptions): Configuration => {
       clean: true,
       publicPath: '/',
     },
+    cache: buildCache(options),
     plugins: buildPlugins(options),
     module: moduleBuildLoaders(options),
     resolve: buildResolvers(options),
