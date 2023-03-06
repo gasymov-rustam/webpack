@@ -2,9 +2,8 @@ import { Action, ThunkAction, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import logger from 'redux-logger';
 
-import { decrementReducer, decrementSliceName } from '../slices';
-
-import { StateSchema } from './StateSchema';
+import { StateSchema } from './schema/StateSchema';
+import { decrementReducer, decrementSliceName } from './slices';
 
 export function createReduxStore() {
   const rootReducers = {

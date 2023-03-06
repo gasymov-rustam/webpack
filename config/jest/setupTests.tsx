@@ -2,7 +2,7 @@ import '@testing-library/jest-dom';
 import { RenderOptions, render } from '@testing-library/react';
 import React, { FC, ReactElement } from 'react';
 
-import { StoreProvider } from '../../src/store';
+import { StoreProvider } from '../../src/providers';
 
 const AllTheProviders: FC<{ children: React.ReactNode }> = ({ children }) => <StoreProvider>{children}</StoreProvider>;
 
